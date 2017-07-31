@@ -47,6 +47,14 @@ class Quadrado(object):
 ''' Classe Retangulo '''
 class Retangulo(object):
     # definir dados
+    base = None
+    altura = None
+
+    def perimetro_retangulo(self, base, altura):
+        # fazendo a soma dos lados
+        perimetro = 2 * (base + altura)
+        return perimetro
+    # end perimetro_retangulo()
 # end class Retangulo
 
 ''' Classe Trapezio '''
