@@ -28,6 +28,7 @@ class Triangulo(object):
 
 ''' Classe Quadrado '''
 class Quadrado(object):
+
     # definir dados
     lado = None
 
@@ -46,6 +47,7 @@ class Quadrado(object):
 
 ''' Classe Retangulo '''
 class Retangulo(object):
+
     # definir dados
     base = None
     altura = None
@@ -65,13 +67,37 @@ class Retangulo(object):
 
 ''' Classe Trapezio '''
 class Trapezio(object):
+
     # definir dados
+
 # end class Trapezio
 
+''' Classe Circulo '''
+class Circulo(object):
+
+    # definir dados
+
+# end class Circulo
+
+''' Classe Losango '''
+class Losango(object):
+
+    # definir dados
+
+# end class Losango
+
+''' Classe Paralelogramo '''
+class Paralelogramo(object):
+
+    # definir dados
+
+# end class Paralelogramo
+
+# -------------------------------- Aqui comeca o programa
 def apresentacao():
-    print("")
+    print("Programa Feito em Python")
 # end apresentacao()
 
 if __name__ == '__main__':
-
+    apresentacao()
 # end main
