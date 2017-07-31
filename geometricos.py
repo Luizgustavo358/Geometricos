@@ -26,17 +26,24 @@ class Triangulo(object):
     # end area_triangulo()
 # end class Triangulo
 
-''' Classe Triangulo '''
+''' Classe Quadrado '''
 class Quadrado(object):
     # definir dados
+    altura = None
+    base = None
+
+    def perimetro_quadrado(self, base, altura):
+        # somando lados
+        perimetro = (2 * base) + (2 * altura)
+        return perimetro
 # end class Quadrado
 
-''' Classe Triangulo '''
+''' Classe Retangulo '''
 class Retangulo(object):
     # definir dados
 # end class Retangulo
 
-''' Classe Triangulo '''
+''' Classe Trapezio '''
 class Trapezio(object):
     # definir dados
 # end class Trapezio

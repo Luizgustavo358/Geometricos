@@ -1,4 +1,4 @@
-# geometricos
+# Geometricos
 
 **Feito por**: Luiz Gustavo
 
