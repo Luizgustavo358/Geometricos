@@ -55,6 +55,12 @@ class Retangulo(object):
         perimetro = 2 * (base + altura)
         return perimetro
     # end perimetro_retangulo()
+
+    def area_retangulo(self, base, altura):
+        # achando a area
+        area = base * altura
+        return area
+    # end area_retangulo()
 # end class Retangulo
 
 ''' Classe Trapezio '''
