@@ -17,7 +17,13 @@ class Triangulo(object):
         # somando lados
         result = lado1 + lado2 + base
         return result
-    # end perimetro
+    # end perimetro()
+
+    def area_triangulo(self, base, altura):
+        # calculando a area
+        area = (base * altura) / 2
+        return area
+    # end area_triangulo()
 # end class Triangulo
 
 ''' Classe Triangulo '''
