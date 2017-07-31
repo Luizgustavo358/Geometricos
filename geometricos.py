@@ -13,11 +13,11 @@ class Triangulo(object):
     lado1 = None
     lado2 = None
 
-    def perimetro(self, lado1, lado2, base):
+    def perimetro_triangulo(self, lado1, lado2, base):
         # somando lados
         result = lado1 + lado2 + base
         return result
-    # end perimetro()
+    # end perimetro_triangulo()
 
     def area_triangulo(self, base, altura):
         # calculando a area
@@ -29,13 +29,19 @@ class Triangulo(object):
 ''' Classe Quadrado '''
 class Quadrado(object):
     # definir dados
-    altura = None
-    base = None
+    lado = None
 
-    def perimetro_quadrado(self, base, altura):
+    def perimetro_quadrado(self, lado):
         # somando lados
-        perimetro = (2 * base) + (2 * altura)
+        perimetro = 4 * lado
         return perimetro
+    # end perimetro_quadrado()
+
+    def area_quadrado(self, lado):
+        # achando a area
+        area = lado ** 2
+        return area
+    # end area_quadrado()
 # end class Quadrado
 
 ''' Classe Retangulo '''
