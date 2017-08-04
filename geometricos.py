@@ -16,6 +16,13 @@ class Triangulo(object):
     lado1 = None
     lado2 = None
 
+    def __init__(base, altura, lado1, lado2):
+        self.base = base
+        self.altura = altura
+        self.lado1 = lado1
+        self.lado2 = lado2
+    # end construtor
+
     def perimetro_triangulo(self, lado1, lado2, base):
         # somando lados
         result = lado1 + lado2 + base
@@ -34,6 +41,10 @@ class Quadrado(object):
 
     # definir dados
     lado = None
+
+    def __init__(lado):
+        self.lado = lado
+    # end construtor
 
     def perimetro_quadrado(self, lado):
         # somando lados
@@ -54,6 +65,11 @@ class Retangulo(object):
     # definir dados
     base = None
     altura = None
+
+    def __init__(base, altura):
+        self.base = base
+        self.altura = altura
+    # end construtor
 
     def perimetro_retangulo(self, base, altura):
         # fazendo a soma dos lados
@@ -76,6 +92,12 @@ class Trapezio(object):
     base_menor = None
     altura = None
 
+    def __init__(base_maior, base_menor, altura):
+        self.base_maior = base_maior
+        self.base_menor = base_menor
+        self.altura = altura
+    # end construtor
+
     def perimetro_trapezio(self, base_maior, base_menor, lado1, lado2):
         # achando o perimetro do Trapezio
         perimetro = base_maior + base_menor + lado1 + lado2
@@ -94,6 +116,10 @@ class Circulo(object):
 
     # definir dados
     raio = None
+
+    def __init__(lado):
+        self.lado = lado
+    # end construtor
 
     def perimetro_circulo(self, raio):
         # achando o perimetro do Circulo
@@ -116,6 +142,12 @@ class Losango(object):
     diagonal_maior = None
     diagonal_menor = None
 
+    def __init__(lado, diagonal_maior, diagonal_menor):
+        self.lado = lado
+        self.diagonal_maior = diagonal_maior
+        self.diagonal_menor = diagonal_menor
+    # end construtor
+
     def perimetro_losango(self, lado):
         # achando o perimetro do Losango
         perimetro = 4 * lado
@@ -137,6 +169,13 @@ class Paralelogramo(object):
     lado_b = None
     base = None
     altura = None
+
+    def __init__(lado_a, lado_b, base, altura):
+        self.lado_a = lado_a
+        self.lado_b = lado_b
+        self.base = base
+        self.altura = altura
+    # end construtor
 
     def perimetro_paralelogramo(self, lado_a, lado_b):
         # achando o perimetro do Paralelogramo
