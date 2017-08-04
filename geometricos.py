@@ -191,10 +191,124 @@ class Paralelogramo(object):
 # end class Paralelogramo
 
 # -------------------------------- Aqui comeca o programa
+
+# definir dados
+triangulo = Triangulo()
+quadrado = Quadrado()
+retangulo = Retangulo()
+trapezio = Trapezio()
+circulo = Circulo()
+losango = Losango()
+paralelogramo = Paralelogramo()
+
 def apresentacao():
-    print("Programa Feito em Python")
+    print("\nPrograma Feito em Python")
+    print("Feito por: Luiz Gustavo")
 # end apresentacao()
 
+def opcoes():
+    print("\n0 - Sair")
+    print("1 - Triangulo")
+    print("2 - Quadrado")
+    print("3 - Retangulo")
+    print("4 - Trapezio")
+    print("5 - Circulo")
+    print("6 - Losango")
+    print("7 - Paralelogramo")
+# end opcoes()
+
+def le_opcao():
+    opcao = int(input("\nEntre com um número: "))
+    return opcao
+# end le_opcao()
+
+def escolhe_opcao(opcao):
+    if opcao == 1:
+        triangulo()
+    elif opcao == 2:
+        quadrado()
+    elif opcao == 3:
+        retangulo()
+    elif opcao == 4:
+        trapezio()
+    elif opcao == 5:
+        circulo()
+    elif opcao == 6:
+        losango()
+    elif opcao == 7:
+        paralelogramo()
+    # end if
+# end escolhe_opcao()
+
+def triangulo():
+    print("Você escolheu: Triangulo")
+
+    pergunta()
+
+    tipo = int(input("Qual tipo deseja: "))
+
+    if tipo == 1:
+        # perimetro do triangulo
+        base = le_base()
+    elif tipo == 2:
+        # area do triangulo
+        base = le_base()
+    # end if
+# end triangulo
+
+def le_base():
+    base = int(input("\nQual a base: "))
+    return base
+# end le_base
+
+def pergunta():
+    print("\n0 - Nada")
+    print("1 - Perímetro")
+    print("2 - Área")
+# end pergunta()
+
+def quadrado():
+    print("Quadrado")
+# end quadrado()
+
+def retangulo():
+    print("Retangulo")
+# end retangulo()
+
+def trapezio():
+    print("Trapezio")
+# end trapezio()
+
+def circulo():
+    print("Circulo")
+# end circulo()
+
+def losango():
+    print("Losango")
+# end losango()
+
+def paralelogramo():
+    print("Paralelogramo")
+# end paralelogramo()
+
 if __name__ == '__main__':
+    # apresentando programa
     apresentacao()
+
+    # mostrando opcoes
+    opcoes()
+
+    # lendo opcao
+    opcao = le_opcao()
+
+    while opcao != 0:
+        # escolhendo opcao
+        escolhe_opcao(opcao)
+
+        # mostrando opcoes
+        opcoes()
+
+        # lendo opcoes
+        opcao = le_opcao()
+    # end while
 # end main
