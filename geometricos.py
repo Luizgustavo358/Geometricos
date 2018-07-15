@@ -285,7 +285,7 @@ def pergunta():
 # Metodo para o triangulo, onde calcula e mostra o perimetro ou area.
 #
 def funcTriangulo():
-    print("-------------------------------------------------")
+    print("\n-------------------------------------------------")
     print("\nVocê escolheu: Triangulo")
 
     # instancia o objeto triangulo
@@ -322,7 +322,7 @@ def funcTriangulo():
         print("\nA Área do Triângulo é de: ", area)
     # end if
 
-    print("-------------------------------------------------")
+    print("\n-------------------------------------------------")
 # end funcTriangulo
 
 
