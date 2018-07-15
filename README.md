@@ -19,5 +19,7 @@ $python geometricos.py
 O que usei:
 ---
 - [PyCharm Edu](https://www.jetbrains.com/pycharm-edu/download/#section=windows) - Para Escrever o código e rodá-lo.
+- [Visual Studio Code](https://code.visualstudio.com/) - Para Escrever o código.
+- Terminal
 
 Enjoy it :+1:
