@@ -14,7 +14,7 @@ class Triangulo(object):
     #
     # Metodo que calcula o perimetro de um triangulo.
     # @param int lado1, lado2, base -> passados pelo usuario.
-    # @return int result -> retorna o perimetro.
+    # @return int perimetro -> retorna o perimetro.
     #
     def perimetro_triangulo(self, lado1, lado2, base):
         # somando lados
@@ -40,7 +40,9 @@ class Triangulo(object):
 class Quadrado(object):
 
     #
-    #
+    # Metodo que calcula o perimetro de um quadrado.
+    # @param lado -> passado pelo usuario.
+    # @return int perimetro -> retorna o perimetro.
     #
     def perimetro_quadrado(self, lado):
         # somando lados
@@ -50,7 +52,9 @@ class Quadrado(object):
 
 
     #
-    #
+    # Metodo que calcula a area de um quadrado.
+    # @param lado -> passado pelo usuario.
+    # @return int area -> retorna a area.
     #
     def area_quadrado(self, lado):
         # achando a area
@@ -330,8 +334,42 @@ def funcTriangulo():
 # Metodo para o quadrado, onde calcula e mostra o perimetro ou area.
 #
 def funcQuadrado():
-    print("Quadrado")
-# end quadrado()
+    print("\n-------------------------------------------------")
+    print("\nVocê escolheu: Quadrado")
+
+    # instancia o objeto triangulo
+    quadrado = Quadrado()
+
+    # mostra as opcoes de calculo
+    pergunta()
+
+    # escolhe a opcao
+    tipo = int(input("\nQual tipo deseja: "))
+
+    # testa as opcoes
+    if tipo == 1:
+        # perimetro do quadrado
+        lado = le_lado()
+
+        # calcula o perimetro
+        perimetro = quadrado.perimetro_quadrado(lado)
+
+        # mostra o perimetro
+        print("\nO Perímetro do Quadrado é de: ", perimetro)
+        
+    elif tipo == 2:
+        # area do quadrado
+        lado = le_lado()
+
+        # calcula a area
+        area = quadrado.area_quadrado(lado)
+
+        # mostra a area
+        print("\nA Área do Quadrado é de: ", area)
+    # end if
+
+    print("\n-------------------------------------------------")
+# end funcQuadrado()
 
 
 #
