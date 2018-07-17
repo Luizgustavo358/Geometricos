@@ -4,7 +4,7 @@
 
 Sobre
 ---
-- Objetivo: Faz a soma dos lados dos geometricos e faz a area.
+- Objetivo: Calcula a Área e Perímetro de um Geometrico.
 - Uso de várias classes.
 - Código feito em Python.
 
