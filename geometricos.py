@@ -97,7 +97,7 @@ class Trapezio(object):
     #
     # Metodo que calcula o perimetro de um trapezio.
     # @param base_menor, base_maior, lado1, lado2 -> passados pelo usuario.
-    # @return area -> retorna a area.
+    # @return perimetro -> retorna o perimetro.
     #
     def perimetro_trapezio(self, base_maior, base_menor, lado1, lado2):
         # achando o perimetro do Trapezio
@@ -122,7 +122,9 @@ class Trapezio(object):
 class Circulo(object):
 
     #
-    #
+    # Metodo que calcula o perimetro de um circulo.
+    # @param raio -> passado pelo usuario.
+    # @return perimetro -> retorna o perimetro.
     #
     def perimetro_circulo(self, raio):
         # achando o perimetro do Circulo
@@ -132,7 +134,9 @@ class Circulo(object):
 
 
     #
-    #
+    # Metodo que calcula a area de um circulo.
+    # @param raio -> passado pelo usuario.
+    # @return area -> retorna a area.
     #
     def area_circulo(self, raio):
         # achando a area do Circulo
@@ -222,7 +226,7 @@ def opcoes():
 
 #
 # Metodo que le as opcoes.
-# @retun int opcao -> numero escolhido.
+# @retun opcao -> numero escolhido.
 #
 def le_opcao():
     opcao = int(input("\nEntre com um número: "))
@@ -232,7 +236,7 @@ def le_opcao():
 
 #
 # Metodo escolhe a opcao.
-# @param int opcao -> escolhida pelo usuario.
+# @param opcao -> escolhida pelo usuario.
 #
 def escolhe_opcao(opcao):
     if opcao == 1:
@@ -255,7 +259,7 @@ def escolhe_opcao(opcao):
 
 #
 # Metodo que le a base de um geometrico.
-# @return int base -> escolhida pelo usuario.
+# @return base -> escolhida pelo usuario.
 #
 def le_base():
     base = int(input("\nQual a base: "))
@@ -265,7 +269,7 @@ def le_base():
 
 #
 # Metodo que le a Altura de um geometrico.
-# @return int altura -> escolhida pelo usuario.
+# @return altura -> escolhida pelo usuario.
 #
 def le_altura():
     altura = int(input("\nQual é a altura: "))
@@ -275,13 +279,22 @@ def le_altura():
 
 #
 # Metodo que le o lado de um geometrico.
-# @return int lado -> escolhida pelo usuario.
+# @return lado -> escolhida pelo usuario.
 #
 def le_lado():
     lado = int(input("\nQual é o tamanho do lado: "))
     return lado
 # end le_lado()
 
+
+#
+# Metodo que le o raio de um geometrico.
+# @return raio -> escolhida pelo usuario.
+#
+def le_raio():
+    raio = int(input("\nQual é o raio: "))
+    return raio
+# end le_raio()
 
 #
 # Metodo que mostra as opcoes de calculo.
@@ -475,7 +488,41 @@ def funcTrapezio():
 # Metodo para o circulo, onde calcula e mostra o perimetro ou area.
 #
 def funcCirculo():
-    print("Circulo")
+    print("\n-------------------------------------------------")
+    print("\nVocê escolheu: Circulo")
+
+    # instancia o objeto trapezio
+    circulo = Circulo()
+
+    # mostra as opcoes de calculo
+    pergunta()
+
+    # escolhe a opcao
+    tipo = int(input("\nQual tipo deseja: "))
+
+    # testa as opcoes
+    if tipo == 1:
+        # perimetro do circulo
+        raio = le_raio()
+
+        # calcula o perimetro
+        perimetro = circulo.perimetro_circulo(raio)
+
+        # mostra o perimetro
+        print("\nO Perímetro do Circulo é de: ", perimetro)
+        
+    elif tipo == 2:
+        # area do quadrado
+        raio = le_raio()
+
+        # calcula a area
+        area = circulo.area_circulo(raio)
+
+        # mostra a area
+        print("\nA Área do Circulo é de: ", area)
+    # end if
+
+    print("\n-------------------------------------------------")
 # end circulo()
 
 
