@@ -95,7 +95,9 @@ class Retangulo(object):
 class Trapezio(object):
 
     #
-    #
+    # Metodo que calcula o perimetro de um trapezio.
+    # @param base_menor, base_maior, lado1, lado2 -> passados pelo usuario.
+    # @return area -> retorna a area.
     #
     def perimetro_trapezio(self, base_maior, base_menor, lado1, lado2):
         # achando o perimetro do Trapezio
@@ -105,7 +107,9 @@ class Trapezio(object):
 
     
     #
-    #
+    # Metodo que calcula a area de um trapezio.
+    # @param base_menor, base_maior, altura -> passados pelo usuario.
+    # @return area -> retorna a area.
     #
     def area_trapezio(self, base_menor, base_maior, altura):
         # achando a area do Trapezio
@@ -424,7 +428,46 @@ def funcRetangulo():
 # Metodo para o trapezio, onde calcula e mostra o perimetro ou area.
 #
 def funcTrapezio():
-    print("Trapezio")
+    print("\n-------------------------------------------------")
+    print("\nVocê escolheu: Trapezio")
+
+    # instancia o objeto trapezio
+    trapezio = Trapezio()
+
+    # mostra as opcoes de calculo
+    pergunta()
+
+    # escolhe a opcao
+    tipo = int(input("\nQual tipo deseja: "))
+
+    # testa as opcoes
+    if tipo == 1:
+        # perimetro do quadrado
+        base_maior = le_base()
+        base_menor = le_base()
+        lado1 = le_lado()
+        lado2 = le_lado()
+
+        # calcula o perimetro
+        perimetro = trapezio.perimetro_trapezio(base_maior, base_menor, lado1, lado2)
+
+        # mostra o perimetro
+        print("\nO Perímetro do Trapezio é de: ", perimetro)
+        
+    elif tipo == 2:
+        # area do quadrado
+        base_maior = le_base()
+        base_menor = le_base()
+        altura = le_altura()
+
+        # calcula a area
+        area = trapezio.area_trapezio(base_maior, base_menor, altura)
+
+        # mostra a area
+        print("\nA Área do Trapezio é de: ", area)
+    # end if
+
+    print("\n-------------------------------------------------")
 # end trapezio()
 
 
