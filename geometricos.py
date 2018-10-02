@@ -1,6 +1,7 @@
 '''
     Nome do Programa: geometricos.py
     Autor: Luiz Gustavo Bragança dos Santos
+    Autor: Ricardo Xavier Sena
     Objetivo: Calcula a Area e Perimetro de um Geometrico.
 '''
 
@@ -33,6 +34,29 @@ class Triangulo(object):
         area = (base * altura) / 2
         return area
     # end area_triangulo()
+
+    #
+    # Metodo que classifica triangulos.
+    # @param base, altura -> passados pelo usuario.
+    # @return tipo -> qual o tipo de triangulo temos.
+    #
+    def tipo_triangulo(self, lado1, lado2, base):
+        tipo = ""
+
+        # se for isosceles 
+        if lado1 == lado2 and lado1 != base
+            tipo = "isosceles"
+            return tipo
+        # se for escaleno    
+        if else lado1 != lado2 and lado1 != base and lado2 != base
+            tipo = "escaleno"
+            return tipo
+        else
+            tipo = equilatero
+            return tipo
+    # end tipo_triangulo()
+
+
 # end class Triangulo
 
 
@@ -303,6 +327,7 @@ def pergunta():
     print("\n0 - Nada")
     print("1 - Perímetro")
     print("2 - Área")
+    print("3 - Tipo Triangulo")
 # end pergunta()
 
 
@@ -345,6 +370,17 @@ def funcTriangulo():
 
         # mostra a area
         print("\nA Área do Triângulo é de: ", area)
+    elif tipo == 3:
+        #ler todos lados
+        base = le_base()
+        lado1 = le_lado()
+        lado2 = le_lado()
+
+        #descobrir o lado
+        ladoT - triangulo.tipo_triangulo(lado1, lado2, base)
+
+        #mostra lado
+        print("\nO Tipo de triangulo é: ", ladoT)
     # end if
 
     print("\n-------------------------------------------------")
