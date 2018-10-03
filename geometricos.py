@@ -162,7 +162,7 @@ class Losango(object):
     #
     #
     #
-    def area_losango(self):
+    def area_losango(self, diagonal_menor, diagonal_maior):
         # achando a area do Losango
         area = (diagonal_maior * diagonal_menor) / 2
         return area
@@ -294,6 +294,15 @@ def le_lado():
 def le_raio():
     raio = int(input("\nQual é o raio: "))
     return raio
+# end le_raio()
+
+#
+# Metodo que le a diagonal de um geometrico.
+# @return diagonal -> escolhida pelo usuario.
+#
+def le_diagonal():
+    diagonal = int(input("\nQual é a diagonal: "))
+    return diagonal
 # end le_raio()
 
 #
@@ -530,7 +539,42 @@ def funcCirculo():
 # Metodo para o losango, onde calcula e mostra o perimetro ou area.
 #
 def funcLosango():
-    print("Losango")
+    print("\n-------------------------------------------------")
+    print("\nVocê escolheu: Losango")
+
+    # instancia o objeto losango
+    losango = Losango()
+
+    # mostra as opcoes de calculo
+    pergunta()
+
+    # escolhe a opcao
+    tipo = int(input("\nQual tipo deseja: "))
+
+    # testa as opcoes
+    if tipo == 1:
+        # perimetro do circulo
+        lado = le_lado()
+
+        # calcula o perimetro
+        perimetro = losango.perimetro_losango(lado)
+
+        # mostra o perimetro
+        print("\nO Perímetro do Losango é de: ", perimetro)
+        
+    elif tipo == 2:
+        # area do quadrado
+        diagonal_menor = le_diagonal()
+        diagonal_maior = le_diagonal()
+
+        # calcula a area
+        area = losango.area_losango(diagonal_menor, diagonal_maior)
+
+        # mostra a area
+        print("\nA Área do Losango é de: ", area)
+    # end if
+
+    print("\n-------------------------------------------------")
 # end losango()
 
 
