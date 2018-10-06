@@ -192,6 +192,26 @@ class Paralelogramo(object):
     # end area_paralelogramo()
 # end class Paralelogramo
 
+class Hexagono(object):
+    
+    #
+    #
+    #
+    def perimetro_hexagono(self, lado):
+        perimetro = lado * 6
+        return perimetro
+    #end perimetro_hexagono()
+
+    def area_hexagono(self, lado):
+        cateto = lado/2
+        h = (lado ** 2) - (cateto ** 2)
+        h = math.sqrt(h)
+        area = (h * cateto) * 6
+        return area
+
+
+
+
 
 # -------------------------------- Aqui comeca o programa
 
@@ -221,6 +241,7 @@ def opcoes():
     print("5 - Circulo")
     print("6 - Losango")
     print("7 - Paralelogramo")
+    print("8 - Hexagono")
 # end opcoes()
 
 
@@ -252,7 +273,9 @@ def escolhe_opcao(opcao):
     elif opcao == 6:
         funcLosango()
     elif opcao == 7:
-        funcParalelogramo()        
+        funcParalelogramo()      
+    elif opcao == 8:
+        funcHexagono()  
     # end if
 # end escolhe_opcao()
 
@@ -584,6 +607,44 @@ def funcLosango():
 def funcParalelogramo():
     print("Paralelogramo")
 # end paralelogramo()
+
+def funcHexagono():
+    print("\n-------------------------------------------------")
+    print("\nVocê escolheu: Hexagono")
+
+    # instancia o objeto losango
+    hexagono = Hexagono()
+
+    # mostra as opcoes de calculo
+    pergunta()
+
+    # escolhe a opcao
+    tipo = int(input("\nQual tipo deseja: "))
+
+    # testa as opcoes
+    if tipo == 1:
+        # perimetro do circulo
+        lado = le_lado()
+
+        # calcula o perimetro
+        perimetro = hexagono.perimetro_hexagono(lado)
+
+        # mostra o perimetro
+        print("\nO Perímetro do Hexagono é de: ", perimetro)
+        
+    elif tipo == 2:
+        # area do quadrado
+        lado = le_lado()
+
+        # calcula a area
+        area = hexagono.area_hexagono(lado)
+
+        # mostra a area
+        print("\nA Área do Hexagono é de: ", area)
+    # end if
+
+    print("\n-------------------------------------------------")
+# end losango()
 
 
 #
