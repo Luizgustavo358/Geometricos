@@ -192,6 +192,24 @@ class Paralelogramo(object):
     # end area_paralelogramo()
 # end class Paralelogramo
 
+class Esagono(object):
+    
+    #
+    #
+    #
+    def perimetro_esagono(self, lado):
+        perimetro = lado * 6
+        return perimetro
+    #end perimetro_esagono()
+
+    def area_esagono(self, lado):
+        cateto = lado/2
+        h = (lado ** 2) - (cateto ** 2)
+        h = math.
+
+
+
+
 
 # -------------------------------- Aqui comeca o programa
 
