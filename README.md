@@ -13,7 +13,7 @@ Para Rodar o Programa:
 Escreva no Terminal do Linux:
 
 ```sh
-python geometricos.py
+python3 geometricos.py
 ```
 
 O que usei:
