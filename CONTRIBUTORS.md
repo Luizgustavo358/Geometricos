@@ -6,3 +6,7 @@ Contribuidores
 
 #### Nome: [Arthur](https://github.com/ArthurLPereira)
 - GitHub: [ArthurLPereira](https://github.com/ArthurLPereira)
+
+
+#### Nome: [Ricardo Sena](https://github.com/KakaSena)
+- GitHub: [KakaSena](https://github.com/KakaSena)
