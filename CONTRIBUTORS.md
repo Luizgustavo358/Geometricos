@@ -10,3 +10,7 @@ Contribuidores
 
 #### Nome: [Ricardo Sena](https://github.com/KakaSena)
 - GitHub: [KakaSena](https://github.com/KakaSena)
+
+
+#### Nome: [João Castro](https://github.com/castrob)
+- GitHub: [castrob](https://github.com/castrob)
