@@ -34,18 +34,30 @@ class Triangulo(object):
         return area
     # end area_triangulo()
 
+    #
+    # Metodo que calcula a area de qualquer triangulo (Formula de Heron)
+    # @param lado1, lado2, base -> passados pelo usuario.
+    # @return area -> retorna a area.
+    #
+    def area_triangulo_heron(self, lado1, lado2, base):
+        semiPerimetro = (lado1 + lado2 + base)/2
+        area = (semiPerimetro*(semiPerimetro-lado1)*(semiPerimetro-lado2)*(semiPerimetro-base))**(1/2.0)
+        return area
+    #end area_triangulo()
+        
+
     def tipo_triangulo(self, lado1, lado2, base):
         tipo = ""
 
         # se for isosceles 
-        if lado1 == lado2 and lado1 != base
+        if lado1 == lado2 and lado1 != base:
             tipo = "isosceles"
             return tipo
         # se for escaleno    
-        if else lado1 != lado2 and lado1 != base and lado2 != base
+        elif lado1 != lado2 and lado1 != base and lado2 != base:
             tipo = "escaleno"
             return tipo
-        else
+        else:
             tipo = equilatero
             return tipo
     # end tipo_triangulo()
@@ -352,7 +364,14 @@ def pergunta():
     print("\n0 - Nada")
     print("1 - Perímetro")
     print("2 - Área")
-    print("3 - Tipo Triangulo")
+# end pergunta()
+
+def pergunta_triagulo():
+    print("\n0 - Nada")
+    print("1 - Perímetro")
+    print("2 - Área(Base/Altura)")
+    print("3 - Área(Lado A, Lado B e Base)")
+    print("4 - Tipo de Triangulo")
 # end pergunta()
 
 
@@ -367,7 +386,7 @@ def funcTriangulo():
     triangulo = Triangulo()
 
     # mostra as opcoes de calculo
-    pergunta()
+    pergunta_triagulo()
 
     # escolhe a opcao
     tipo = int(input("\nQual tipo deseja: "))
@@ -397,6 +416,18 @@ def funcTriangulo():
      
         print("\nA Área do Triângulo é de: ", area)
 
+    elif tipo == 3:
+        #ler todos lados
+        base = le_base()
+        lado1 = le_lado()
+        lado2 = le_lado()
+
+        # calcula a area
+        area = triangulo.area_triangulo_heron(lado1, lado2, base)
+
+        # mostra a area
+     
+        print("\nA Área do Triângulo é de: ", area)
     elif tipo == 3:
         #ler todos lados
         base = le_base()
