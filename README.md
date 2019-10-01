@@ -2,6 +2,9 @@
 
 **Feito por**: Luiz Gustavo
 
+**Contribuidores**: Ricardo Sena
+
+
 Sobre
 ---
 - Objetivo: Calcula a Área e Perímetro de um Geometrico.
