@@ -239,8 +239,13 @@ class Hexagono(object):
         return area
 
 
-
-
+class Octogono(object):
+    def perimetro_octogono(self, lado):
+        return lado*8
+    
+    def area_octogono(self, lado):
+        area = 2 * lado**2 * (1+ math.sqrt(2))
+        return area
 
 # -------------------------------- Aqui comeca o programa
 
@@ -271,6 +276,7 @@ def opcoes():
     print("6 - Losango")
     print("7 - Paralelogramo")
     print("8 - Hexagono")
+    print("9 - Octogono")
 # end opcoes()
 
 
@@ -305,6 +311,8 @@ def escolhe_opcao(opcao):
         funcParalelogramo()      
     elif opcao == 8:
         funcHexagono()  
+    elif opcao == 9: 
+        funcOctogono()
     # end if
 # end escolhe_opcao()
 
@@ -706,8 +714,44 @@ def funcHexagono():
     # end if
 
     print("\n-------------------------------------------------")
-# end losango()
 
+
+def funcOctogono():
+    print("\n-------------------------------------------------")
+    print("\nVocê escolheu: Octogono")
+
+    # instancia o objeto 
+    octogono = Octogono()
+
+    # mostra as opcoes de calculo
+    pergunta()
+
+    # escolhe a opcao
+    tipo = int(input("\nQual tipo deseja: "))
+
+    # testa as opcoes
+    if tipo == 1:
+        # perimetro do circulo
+        lado = le_lado()
+
+        # calcula o perimetro
+        perimetro = octogono.perimetro_octogono(lado)
+
+        # mostra o perimetro
+        print("\nO Perímetro do octogono é de: ", perimetro)
+        
+    elif tipo == 2:
+        # area do quadrado
+        lado = le_lado()
+
+        # calcula a area
+        area = octogono.area_octogono(lado)
+
+        # mostra a area
+        print("\nA Área do octogono é de: ", area)
+    # end if
+
+    print("\n-------------------------------------------------")
 
 #
 # Main.
