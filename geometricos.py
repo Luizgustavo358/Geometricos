@@ -214,7 +214,7 @@ class Paralelogramo(object):
     #
     #
     #
-    def area_paralelogramo(self):
+    def area_paralelogramo(self, base, altura):
         # achando area do Paralelogramo
         area = base * altura
         return area
@@ -675,7 +675,43 @@ def funcLosango():
 # Metodo para o paralelogramo, onde calcula e mostra o perimetro ou area.
 #
 def funcParalelogramo():
-    print("Paralelogramo")
+    print("\n-------------------------------------------------")
+    print("\nVocê escolheu: Paralelogramo")
+
+    # instancia o objeto losango
+    paralelogramo = Paralelogramo()
+
+    # mostra as opcoes de calculo
+    pergunta()
+
+    # escolhe a opcao
+    tipo = int(input("\nQual tipo deseja: "))
+
+    # testa as opcoes
+    if tipo == 1:
+        # perimetro do circulo
+        lado1 = le_lado()
+        lado2 = le_lado()
+
+        # calcula o perimetro
+        perimetro = paralelogramo.perimetro_paralelogramo(lado1, lado2)
+
+        # mostra o perimetro
+        print("\nO Perímetro do Paralelogramo é de: ", perimetro)
+        
+    elif tipo == 2:
+        # area do quadrado
+        base = le_base()
+        altura = le_altura()
+
+        # calcula a area
+        area = paralelogramo.area_paralelogramo(base, altura)
+
+        # mostra a area
+        print("\nA Área do Paralelogramo é de: ", area)
+    # end if
+
+    print("\n-------------------------------------------------")
 # end paralelogramo()
 
 def funcHexagono():
