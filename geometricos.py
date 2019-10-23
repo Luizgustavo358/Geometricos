@@ -668,7 +668,7 @@ def funcLosango():
 #
 def funcParalelogramo():
     print("\n-------------------------------------------------")
-    print("\nVocê escolheu: Hexagono")
+    print("\nVocê escolheu: Paralelogramo")
 
     # instancia o objeto losango
     paralelogramo = Paralelogramo()
