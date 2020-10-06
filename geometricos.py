@@ -247,6 +247,33 @@ class Octogono(object):
         area = 2 * lado**2 * (1+ math.sqrt(2))
         return area
 
+''' Classe Pentagono '''
+class Pentagono(object):
+
+    #
+    # Metodo que calcula o perimetro de um pentagono.
+    # @param lado -> passado pelo usuario.
+    # @return perimetro -> retorna o perimetro.
+    #
+    def perimetro_pentagono(self, lado):
+        # somando lados
+        perimetro = 5 * lado
+        return perimetro
+    # end perimetro_pentagono()
+
+    #
+    # Metodo que calcula a area de um pentagono.
+    # @param lado -> passado pelo usuario.
+    # @param apotema -> passado pelo usuario.
+    # @return area -> retorna a area.
+    #
+    def area_pentagono(self, lado, apotema):
+        # achando a area
+        area = (5* lado) * apotema
+        return area
+    # end area_pentagono()
+# end class Pentagono  
+      
 # -------------------------------- Aqui comeca o programa
 
 
@@ -259,6 +286,7 @@ def apresentacao():
     print("+----------------------------------------------+")
     print("| Calcula a Area e Perimetro de um Geometrico  |")
     print("|            Feito por: Luiz Gustavo           |")
+    print("|       Contribuidores: Ricardo Sena           |")
     print("+----------------------------------------------+\n")
 # end apresentacao()
 
@@ -277,6 +305,7 @@ def opcoes():
     print("7 - Paralelogramo")
     print("8 - Hexagono")
     print("9 - Octogono")
+    print("10 - Pentagono")
 # end opcoes()
 
 
@@ -313,6 +342,8 @@ def escolhe_opcao(opcao):
         funcHexagono()  
     elif opcao == 9: 
         funcOctogono()
+    elif opcao == 10: 
+        funcPentagono()
     # end if
 # end escolhe_opcao()
 
@@ -364,6 +395,17 @@ def le_diagonal():
     diagonal = int(input("\nQual é a diagonal: "))
     return diagonal
 # end le_raio()
+
+
+#
+# Metodo que le o apotema de um poligono.
+# @return apotema -> escolhida pelo usuario.
+#
+def le_apotema():
+    apotema = int(input("\nQual é o tamanho do apotema: "))
+    return apotema
+# end le_apotema()
+
 
 #
 # Metodo que mostra as opcoes de calculo.
@@ -789,6 +831,51 @@ def funcOctogono():
 
     print("\n-------------------------------------------------")
 
+#
+# Metodo para o pentagono, onde calcula e mostra o perimetro ou area.
+#
+
+def funcPentagono():
+    print("\n-------------------------------------------------")
+    print("\nVocê escolheu: Pentagono")
+
+    # instancia o objeto pentagono
+    pentagono = Pentagono()
+
+    # mostra as opcoes de calculo
+    pergunta()
+
+    # escolhe a opcao
+    tipo = int(input("\nQual tipo deseja: "))
+
+    # testa as opcoes
+    if tipo == 1:
+        # perimetro do pentagono
+        lado = le_lado()
+
+        # calcula o perimetro
+        perimetro = pentagono.perimetro_pentagono(lado)
+
+        # mostra o perimetro
+        print("\nO Perímetro do Pentagono é de: ", perimetro)
+        
+    elif tipo == 2:
+        # area do pentagono
+        lado = le_lado()
+        apotema = le_apotema()
+
+        # calcula a area
+        area = pentagono.area_pentagono(lado,apotema)
+
+        # mostra a area
+        print("\nA Área do Pentagono é de: ", area)
+    # end if
+
+    print("\n-------------------------------------------------")
+# end funcPentagono()
+    
+    
+    
 #
 # Main.
 #
