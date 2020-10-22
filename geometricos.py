@@ -79,6 +79,10 @@ class Quadrado(object):
         return perimetro
     # end perimetro_quadrado()
 
+    def diagonal_quadrado(self, lado):
+        diagonal = lado * sqrt(2)
+        return diagonal
+
 
     #
     # Metodo que calcula a area de um quadrado.
@@ -529,8 +533,12 @@ def funcQuadrado():
         # calcula a area
         area = quadrado.area_quadrado(lado)
 
+        # calcula a diagonal
+        diagonal = quadrado.diagonal_quadrado(lado)
+
         # mostra a area
         print("\nA Área do Quadrado é de: ", area)
+        print("\nA Diagonal do Quadrado é de: ", diagonal)
     # end if
 
     print("\n-------------------------------------------------")
