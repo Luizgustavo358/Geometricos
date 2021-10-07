@@ -278,6 +278,33 @@ class Pentagono(object):
     # end area_pentagono()
 # end class Pentagono  
       
+
+''' Classe Decagono '''
+class Decagono(object):
+
+    #
+    # Metodo que calcula o perimetro de um decagono.
+    # @param lado -> passado pelo usuario.
+    # @return perimetro -> retorna o perimetro.
+    #
+    def perimetro_decagono(self, lado):
+        # somando lados
+        perimetro = 10 * lado
+        return perimetro
+    # end perimetro_decagono()
+
+    #
+    # Metodo que calcula a area de um Decagono.
+    # @param lado -> passado pelo usuario.
+    # @return area -> retorna a area.
+    #
+    def area_decagono(self, lado):
+        # achando a area
+        area = (  (5/2) * math.pow(lado,2) ) * math.sqrt(5+ (2* math.sqrt(5)) )
+        return area
+    # end area_Decagono()
+# end class Decagono  
+
 # -------------------------------- Aqui comeca o programa
 
 
@@ -310,6 +337,7 @@ def opcoes():
     print("8 - Hexagono")
     print("9 - Octogono")
     print("10 - Pentagono")
+    print("11 - Decagono")
 # end opcoes()
 
 
@@ -348,6 +376,8 @@ def escolhe_opcao(opcao):
         funcOctogono()
     elif opcao == 10: 
         funcPentagono()
+    elif opcao == 11:
+        funcDecagono()
     # end if
 # end escolhe_opcao()
 
@@ -877,6 +907,50 @@ def funcPentagono():
 
         # mostra a area
         print("\nA Área do Pentagono é de: ", area)
+    # end if
+
+    print("\n-------------------------------------------------")
+# end funcPentagono()
+
+
+#
+# Metodo para o decagono, onde calcula e mostra o perimetro ou area.
+#
+
+def funcDecagono():
+    print("\n-------------------------------------------------")
+    print("\nVocê escolheu: Decagono")
+
+    # instancia o objeto pentagono
+    decagono = Decagono()
+
+    # mostra as opcoes de calculo
+    pergunta()
+
+    # escolhe a opcao
+    tipo = int(input("\nQual tipo deseja: "))
+
+    # testa as opcoes
+    if tipo == 1:
+        # perimetro do Decagono
+        lado = le_lado()
+
+        # calcula o perimetro
+        perimetro = decagono.perimetro_decagono(lado)
+
+        # mostra o perimetro
+        print("\nO Perímetro do Decagono é de: ", perimetro)
+        
+    elif tipo == 2:
+        # area do pentagono
+        lado = le_lado()
+
+
+        # calcula a area
+        area = decagono.area_decagono(lado)
+
+        # mostra a area
+        print("\nA Área do Decagono é de: ", area)
     # end if
 
     print("\n-------------------------------------------------")
