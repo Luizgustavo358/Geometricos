@@ -9,7 +9,7 @@ from geometric.Hexagono import funcHexagono
 from geometric.Octogono import funcOctogono
 from geometric.Pentagono import funcPentagono
 from geometric.Decagono import funcDecagono
-from util.leitura import le_opcao
+from util.funcoesUteis import le_opcao
 
 
 def apresentacao():
