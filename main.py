@@ -2,6 +2,7 @@ from geometric.Triangulo import funcTriangulo
 from geometric.Quadrado import funcQuadrado
 from geometric.Retangulo import funcRetangulo
 from geometric.Trapezio import funcTrapezio
+from geometric.Circulo import funcCirculo
 from util.leitura import le_opcao
 
 
@@ -42,8 +43,8 @@ def escolhe_opcao(opcao):
         funcRetangulo()
     elif opcao == 4:
         funcTrapezio()
-    # elif opcao == 5:
-    #     funcCirculo()
+    elif opcao == 5:
+        funcCirculo()
     # elif opcao == 6:
     #     funcLosango()
     # elif opcao == 7:
