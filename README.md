@@ -14,10 +14,8 @@ Sobre
 
 ---
 
-<br>
 
 ### Contribuidores:
-<br>
 
 #### Nome: [Otto Bittencourt](https://github.com/OttoWBitt)
 - GitHub: [OttoWBitt](https://github.com/OttoWBitt)
