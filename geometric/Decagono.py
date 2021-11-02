@@ -1,14 +1,16 @@
 import math
-from util.pergunta import pergunta
-from util.leitura import le_lado
+from util.funcoesUteis import pergunta, clear, le_lado
 
 def funcDecagono():
-    print("\n-------------------------------------------------")
+    clear()
+
     print("\nVocê escolheu: Decagono")
 
     pergunta()
 
     tipo = int(input("\nQual tipo deseja: "))
+
+    clear()
 
     if tipo == 1:
         lado = le_lado()
@@ -24,10 +26,8 @@ def funcDecagono():
 
 
 def perimetro_decagono(lado):
-    perimetro = 10 * lado
-    return perimetro
+    return 10 * lado
  
 
 def area_decagono(lado):
-    area = ((5 / 2) * math.pow(lado, 2)) * math.sqrt(5 + (2 * math.sqrt(5)))
-    return area
+    return ((5 / 2) * math.pow(lado, 2)) * math.sqrt(5 + (2 * math.sqrt(5)))
