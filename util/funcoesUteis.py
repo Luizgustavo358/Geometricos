@@ -1,3 +1,12 @@
+from os import system, name
+
+def clear():
+    if name == 'nt':
+        _ = system('cls')
+    else:
+        _ = system('clear')
+
+
 def le_opcao():
     opcao = int(input("\nEntre com um número: "))
     return opcao
@@ -31,3 +40,16 @@ def le_diagonal():
 def le_apotema():
     apotema = int(input("\nQual é o tamanho do apotema: "))
     return apotema
+
+
+def pergunta():
+    print("\n0 - Nada")
+    print("1 - Perímetro")
+    print("2 - Área")
+
+def pergunta_triagulo():
+    print("\n0 - Nada")
+    print("1 - Perímetro")
+    print("2 - Área(Base/Altura)")
+    print("3 - Área(Lado A, Lado B e Base)")
+    print("4 - Tipo de Triangulo")

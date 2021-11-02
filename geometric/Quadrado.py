@@ -1,77 +1,38 @@
-from util.leitura import le_base, le_lado, le_altura
+from math import sqrt
+from util.funcoesUteis import le_lado, clear, pergunta
 
-''' Classe Quadrado '''
-class Quadrado(object):
-
-    # Metodo que calcula o perimetro de um quadrado.
-    # @param lado -> passado pelo usuario.
-    # @return perimetro -> retorna o perimetro.
-    #
-    def perimetro_quadrado(self, lado):
-        # somando lados
-        perimetro = 4 * lado
-        return perimetro
-    # end perimetro_quadrado()
-
-    def diagonal_quadrado(self, lado):
-        diagonal = lado * sqrt(2)
-        return diagonal
-
-    # Metodo que calcula a area de um quadrado.
-    # @param lado -> passado pelo usuario.
-    # @return area -> retorna a area.
-    #
-    def area_quadrado(self, lado):
-        # achando a area
-        area = lado ** 2
-        return area
-    # end area_quadrado()
-# end class Quadrado
-
-def pergunta_quadrado():
-    print("\n0 - Nada")
-    print("1 - Perímetro")
-    print("2 - Área")
-    
 def funcQuadrado():
-    print("\n-------------------------------------------------")
+    clear()
+
     print("\nVocê escolheu: Quadrado")
-    pergunta_quadrado() 
-    tipo = int(input("\nQual tipo deseja: "))
-    # instancia o objeto quadrado
-    quadrado = Quadrado()
     
-    # testa as opcoes
+    pergunta()
+    tipo = int(input("\nQual tipo deseja: "))
+   
+    clear()
+
     if tipo == 1:
-        # perimetro do quadrado
         lado = le_lado()
-
-        # calcula o perimetro
-        perimetro = quadrado.perimetro_quadrado(lado)
-
-        # mostra o perimetro
+        perimetro = perimetro_quadrado(lado)
         print("\nO Perímetro do Quadrado é de: ", perimetro)
         
     elif tipo == 2:
-        # area do quadrado
         lado = le_lado()
-
-        # calcula a area
-        area = quadrado.area_quadrado(lado)
-
-        # calcula a diagonal
-        diagonal = quadrado.diagonal_quadrado(lado)
-
-        # mostra a area
+        area = area_quadrado(lado)
+        diagonal = diagonal_quadrado(lado)
         print("\nA Área do Quadrado é de: ", area)
         print("\nA Diagonal do Quadrado é de: ", diagonal)
-    # end if
 
     print("\n-------------------------------------------------")
-# end funcQuadrado()
     
 
+def perimetro_quadrado(lado):
+    return 4 * lado
 
-    
-    
-    
+
+def diagonal_quadrado(lado):
+    return lado * sqrt(2)
+
+
+def area_quadrado(lado):
+    return lado ** 2
