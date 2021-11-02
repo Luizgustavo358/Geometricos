@@ -8,6 +8,7 @@ from geometric.Paralelogramo import funcParalelogramo
 from geometric.Hexagono import funcHexagono
 from geometric.Octogono import funcOctogono
 from geometric.Pentagono import funcPentagono
+from geometric.Decagono import funcDecagono
 from util.leitura import le_opcao
 
 
@@ -60,8 +61,8 @@ def escolhe_opcao(opcao):
         funcOctogono()
     elif opcao == 10: 
         funcPentagono()
-    # elif opcao == 11:
-    #     funcDecagono()
+    elif opcao == 11:
+        funcDecagono()
 
 
 if __name__ == '__main__':
